@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre o aplicativo</title>
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card-logo center">
+            <img id="logo-informativo" src="./img/foxbit-logo.png">
+        </div>
+        <div class="center-align flow-text">
+            <p>
+                <strong>Versão do Aplicativo: </strong>
+                <span id="versão">1.0.0</span>
+            </p>
+            <p>
+                <strong>Sobre o Aplicativo: </strong>Esse aplicativo foi feito com
+                <a id="electron" href="#">Electron</a>,
+                <a id="materialize" href="#"> MaterializeCSS</a> e
+                <a id="tippy" href="#"> Tippy.js</a>.</p>
+            <p>
+                <strong>Autor: </strong>
+                <a id="github">André de Fazzio Posman</a>.</p>
+            <button id="btnFechar" class="btn-floating waves-effect waves-light red pulse">
+                <i class="material-icons">close</i>
+                <br>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script>
+    require('../app/js/janela-informativa.js')
+    window.$ = window.jQuery = require('./js/lib/jquery.min.js');
+
+</script>
+
+<script type="text/javascript" src="../node_modules/hammerjs/hammer.min.js"></script>
+<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+</script>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foxbit - Squad Payments</title>
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!--#region Menu topo-->
+    <nav>
+        <div id="menu" class="nav-wrapper grey darken-4">
+            <div class="container">
+                <a href="#" class="brand-logo center">
+                    <img id="logo" src="img/foxbit-logo-min.png" alt="Foxbit">
+                </a>
+                <ul>
+                    <li id="janela-informativa">Sobre o aplicativo</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+
+    <!-- #region menu expansivel -->
+    <div class="container" id="root">
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <!-- #region bancos -->
+            <li>
+                <div class="collapsible-header flow-text">
+                    <i id="icones-menu-expansivel" class="material-icons">attach_money</i>Planilha dos Bancos</div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="col s12 center">
+                            <a id="btnPlanilha" class="waves-effect waves-light btn grey darken-4">
+                                <i class="material-icons left">insert_chart_outlined</i>Planilha de Operações</a>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div id="divBancos">
+
+                        <div class="row center">
+
+                            <div class="col s6">
+                                <span id="btnBra">
+                                    <a id="btnBancos" class="waves-effect waves-light btn red darken-1">bradesco</a>
+                                </span>
+                            </div>
+                            <div class="col s6">
+                                <span id="btnCaixa">
+                                    <a id="btnBancos" class="waves-effect waves-light btn blue darken-1">
+                                        caixa</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row center">
+
+                            <div class="col s6">
+                                <span id="btnBB">
+                                    <a id="btnBancos" class="waves-effect waves-light btn yellow darken-2">
+                                        banco do brasil</a>
+                                </span>
+                            </div>
+                            <div class="col s6">
+                                <span id="btnInter">
+                                    <a id="btnBancos" class="waves-effect waves-light btn orange darken-3">
+                                        Inter</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- #endregion -->
+            <!-- #region estornos -->
+            <li>
+                <div class="collapsible-header flow-text">
+                    <i id="icones-menu-expansivel" class="material-icons">table_chart</i>Planilha de Estorno</div>
+                <div class="collapsible-body center">
+                    <a id="btnEstorno" class="waves-effect waves-light btn grey darken-4">
+                        <i class="material-icons left">insert_chart_outlined</i>Planilha de Estorno</a>
+                </div>
+            </li>
+            <!-- #endregion -->
+            <!-- #region mini-macros -->
+            <li>
+                <div class="collapsible-header flow-text">
+                    <i id="icones-menu-expansivel" class="material-icons">comment</i>Mini Macros</div>
+                <div class="collapsible-body center">
+                    <a id="btnMacro" class="waves-effect waves-light btn grey darken-4">
+                        <i class="material-icons left">border_color</i>Mini Macros</a>
+                </div>
+            </li>
+            <!-- #endregion mini-macros -->
+        </ul>
+    </div>
+    <!-- #endregion -->
+
+
+    <!-- #region botao-flutuante -->
+
+    <div class="fixed-action-btn toolbar">
+        <a class="btn-floating btn-large grey darken-4">
+            <i class="large material-icons">menu</i>
+        </a>
+        <ul>
+            <li class="waves-effect waves-light">
+                <div id="zendesk">
+                    <a href="#!">
+                        <a href="#!" class="zendesk" title="ZenDesk" data-tippy-theme="foxbit">
+                            <i class="material-icons">
+                                laptop
+                            </i>
+                        </a>
+                    </a>
+                </div>
+            </li>
+
+            <li class="waves-effect waves-light">
+                <div id="blinktrade">
+                    <a href="#!">
+                        <a href="#" class="blinktrade" title="BlinkTrade">
+                            <i class="material-icons">timeline</i>
+                        </a>
+                    </a>
+                </div>
+            </li>
+
+            <li class="waves-effect waves-light">
+                <div id="slack">
+                    <a href="#!">
+                        <a href="#" class="slack" title="Slack">
+                            <i class="material-icons">chat</i>
+                        </a>
+                    </a>
+                </div>
+            </li>
+
+            <li class="waves-effect waves-light">
+                <div id="pontomais">
+                    <a href="#!">
+                        <a href="#" class="pontomais" title="PontoMais">
+                            <i class="material-icons">alarm</i>
+                        </a>
+                    </a>
+                </div>
+            </li>
+
+            <li class="waves-effect waves-light">
+                <div id="holerite">
+                    <a href="#!">
+                        <a href="#" class="holerite" title="Holerite">
+                            <i class="material-icons">local_atm</i>
+                        </a>
+                    </a>
+                </div>
+            </li>
+
+            <li class="waves-effect waves-light">
+                <div id="lastpass">
+                    <a href="#!">
+                        <a href="#" class="lastpass" title="LastPass">
+                            <i class="material-icons">lock</i>
+                        </a>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- #endregion -->
+
+
+</body>
+
+<!-- #region Import dos scripts -->
+<script>
+    require('../app/js/janela-principal.js')
+    window.$ = window.jQuery = require('./js/lib/jquery.min.js');
+    $(".dropdown-trigger").dropdown();
+    $(".button-collapse").sideNav();
+    (function ($) {
+        $(function () {
+
+            $('.sidenav').sidenav();
+
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+
+</script>
+
+<script type="text/javascript" src="../node_modules/hammerjs/hammer.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+</script>
+<!-- #endregion -->
+
+</html>
